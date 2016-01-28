@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+  - "0.12.7"
+  - "4.2"
+  - "5.2"
+
+before_script:
+  - npm install --global codacy-coverage
+
+script:
+  - npm run test-cov
+
+after_script:
+  - cat ./coverage/lcov.info | codacy-coverage

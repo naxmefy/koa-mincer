@@ -1,0 +1,44 @@
+{
+  "name": "koa-mincer",
+  "version": "0.1.0",
+  "description": "koa middleware for mincer assets",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/naxmefy/koa-mincer.git"
+  },
+  "keywords": [
+    "koa",
+    "middleware",
+    "mincer",
+    "assets"
+  ],
+  "engines": {
+    "node": ">= 0.12",
+    "iojs": ">= 1.0.0"
+  },
+  "author": "naxmefy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/naxmefy/koa-mincer/issues"
+  },
+  "homepage": "https://github.com/naxmefy/koa-mincer#readme",
+  "dependencies": {
+    "coffee-script": "^1.10.0",
+    "mincer": "^1.4.1"
+  },
+  "devDependencies": {
+    "ejs": "^2.4.1",
+    "jade": "^1.11.0",
+    "jst": "0.0.13",
+    "koa": "^1.1.2",
+    "less": "^1.7.5",
+    "mocha": "^2.4.4",
+    "should": "^8.2.1",
+    "stylus": "^0.53.0",
+    "supertest": "^1.1.0"
+  }
+}
