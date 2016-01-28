@@ -4,7 +4,8 @@
   "description": "koa middleware for mincer assets",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "node_modules/.bin/mocha",
+    "test-cov": "node_modules/.bin/mocha --require coffee-coverage/register-istanbul && istanbul report"
   },
   "repository": {
     "type": "git",
@@ -31,7 +32,9 @@
     "mincer": "^1.4.1"
   },
   "devDependencies": {
+    "coffee-coverage": "^1.0.1",
     "ejs": "^2.4.1",
+    "istanbul": "^0.4.2",
     "jade": "^1.11.0",
     "jst": "0.0.13",
     "koa": "^1.1.2",
