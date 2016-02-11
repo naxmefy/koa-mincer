@@ -1,0 +1,19 @@
+html
+    head
+        != css('asset.css')
+        != css('example-stylus.css')
+
+        != js('asset.js')
+        != js('example-coffee.js')
+    body
+        h1 index
+
+        ul
+            for i in Object.keys(locals)
+                li= i
+
+        pre= css('asset.css')
+        pre= css('example-stylus.css')
+
+        pre= js('asset.js')
+        pre= js('example-coffee.js')
