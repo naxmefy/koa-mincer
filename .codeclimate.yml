@@ -1,0 +1,23 @@
+languages:
+  JavaScript: true
+
+exclude_paths:
+- "example"
+- "test/assets"
+- ".editorconfig"
+- ".gitignore"
+- ".travis.yml"
+- "LICENSE"
+- "README.md"
+
+engines:
+  eslint:
+    enabled: true
+
+  nodesecurity:
+    enabled: false
+  fixme:
+    enabled: false
+
+ratings:
+  paths: []
