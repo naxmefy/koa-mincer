@@ -125,16 +125,21 @@ these scripts may help you!
 // app/config.js
 
 module.exports = {
-    root: __dirname,
-    production: process.env.NODE_ENV === 'production',
-    mountPoint: '/assets',
-    manifestFile: __dirname + "/public/assets/manifest.json",
-    paths: [
-        'assets/css',
-        'assets/js',
-        'assets/templates',
-        'assets/vendor'
-    ]
+    //...
+    assets: {
+        root: __dirname,
+        production: process.env.NODE_ENV === 'production',
+        mountPoint: '/assets',
+        manifestFile: __dirname + "/public/assets/manifest.json",
+        paths: [
+            'assets/css',
+            'assets/js',
+            'assets/templates',
+            'assets/vendor'
+        ]
+    }
+    
+    //...
 };
 ```
 
