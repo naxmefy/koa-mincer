@@ -1,6 +1,6 @@
 {
   "name": "koa-mincer",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "koa middleware for mincer assets",
   "main": "index.js",
   "scripts": {
