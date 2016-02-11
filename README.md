@@ -119,7 +119,7 @@ add a bower.json file (near package.json) and add your dependencies like this
 
 ## precompiling with bower deps and/or fonts etc.
 
-this script may help you!
+these scripts may help you!
 
 ```JavaScript
 // app/config.js
