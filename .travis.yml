@@ -4,10 +4,10 @@ node_js:
   - "5.5"
 
 before_script:
-  - npm install -g codeclimate-test-reporter
+  - npm install -g codacy-coverage
 
 script:
   - npm run test-cov
 
 after_script:
-  - codeclimate-test-reporter < lcov.info
+  - cat ./coverage/lcov.info | codacy-coverage
