@@ -48,7 +48,27 @@ if (!module.parent) app.listen(process.env.PORT || 3000);
 
 ## options
 
-Infos can be found at connect-mincer (https://github.com/clarkdave/connect-mincer#in-more-detail)
+koa-mincer got some new options like
+
+**configure**: you can configure the connect-mincer and mincer object in this function because the
+library is expected to be used as middleware direct there must be a way to configure these objects
+like this:
+
+```JavaScript
+
+//...
+app.use(koaMincer({
+    //...
+    configure: (connectMincer) => {
+        connectMincer.Mincer.CoffeeEngine.setOptions({ bare: false });
+    }
+    //...
+}));
+//...
+
+```
+
+All other infos about options can be found at connect-mincer (https://github.com/clarkdave/connect-mincer#in-more-detail)
 
 ## about mincer
 

@@ -16,6 +16,13 @@ module.exports = function (opts) {
         opts.mountPath = "/assets";
     }
 
+    if (opts.configure == null) {
+        opts.configure = function () {
+        };
+    }
+
+    opts.configure(cm);
+
     const _assets = cm.assets();
     cm.assets = function () {
         return koaCompose([
