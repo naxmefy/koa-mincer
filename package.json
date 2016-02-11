@@ -31,7 +31,8 @@
             "node": true
         },
         "ecmaFeatures": {
-            "blockBindings": true
+            "blockBindings": true,
+            "generators": true
         }
     },
     "dependencies": {
