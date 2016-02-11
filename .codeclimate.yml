@@ -4,10 +4,12 @@ languages:
 exclude_paths:
 - "example"
 - "test/assets"
+- "test/mocha.opts"
 - ".editorconfig"
 - ".gitignore"
 - ".travis.yml"
 - "LICENSE"
+- "package.json"
 - "README.md"
 
 engines:
