@@ -137,8 +137,36 @@ module.exports = {
             'assets/templates',
             'assets/vendor'
         ]
-    }
+    },
     
+    precompile: { 
+        target: __dirname + "/public/assets",
+        files: [
+            // Your targeted ASSETS which required the whole rest like bootstrap etc.
+            'app.js', 
+            'app.css',
+            
+            // IMAGES AND FONTS
+            '*.eot',
+            '*.svg',
+            '*.ttf',
+            '*.woff',
+            '*.woff2',
+            '*.png',
+            '*.gif',
+            '*.jpg',
+            '*.ico',
+            '**/*.eot',
+            '**/*.svg',
+            '**/*.ttf',
+            '**/*.woff',
+            '**/*.woff2',
+            '**/*.png',
+            '**/*.gif',
+            '**/*.jpg',
+            '**/*.ico',
+        ]
+    }
     //...
 };
 ```
@@ -170,33 +198,8 @@ env.registerHelper('asset_path', function(name, opts) {
 });
 
 // __dirname == "bin" folder
-var manifest = new Mincer.Manifest(env, __dirname+'/../app/public/assets'); // Target Public Folder e.g.
-manifest.compile([
-  // Your targeted ASSETS which required the whole rest like bootstrap etc.
-  'app.js', 
-  'app.css',
-  
-  // IMAGES AND FONTS
-  '*.eot',
-  '*.svg',
-  '*.ttf',
-  '*.woff',
-  '*.woff2',
-  '*.png',
-  '*.gif',
-  '*.jpg',
-  '*.ico',
-  '**/*.eot',
-  '**/*.svg',
-  '**/*.ttf',
-  '**/*.woff',
-  '**/*.woff2',
-  '**/*.png',
-  '**/*.gif',
-  '**/*.jpg',
-  '**/*.ico',
-  
-], function(err, data) {
+var manifest = new Mincer.Manifest(env, config.precompile.target);
+manifest.compile(config.precompile.files, function(err, data) {
   if(err) {
     console.error(err);
   } else {
