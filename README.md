@@ -60,7 +60,7 @@ like this:
 app.use(koaMincer({
     //...
     configure: (connectMincer) => {
-        connectMincer.Mincer.CoffeeEngine.setOptions({ bare: false });
+        connectMincer.Mincer.CoffeeEngine.configure({ bare: false });
     }
     //...
 }));
@@ -69,6 +69,8 @@ app.use(koaMincer({
 ```
 
 All other infos about options can be found at connect-mincer (https://github.com/clarkdave/connect-mincer#in-more-detail)
+
+For more infos about engines visit [Mincer API Documentation](http://nodeca.github.io/mincer).
 
 ## about mincer
 
