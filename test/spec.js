@@ -2,10 +2,10 @@
 
 const supertest = require("co-supertest");
 
-const koa = require("koa");
+const Koa = require("koa");
 const koaMincer = require("..");
 
-const app = module.exports = koa();
+const app = module.exports = new Koa();
 
 // ...
 

@@ -1,18 +1,21 @@
 "use strict";
 
-//require('coffee-script/register');
-//module.exports = require('./lib');
-
-const koa = require('koa');
+const debug = require('debug');
+const Koa = require('koa');
 const koaMount = require('koa-mount');
+const koaConvert = require('koa-convert');
 const koaConnect = require('koa-connect');
 const koaCompose = require('koa-compose');
+const KoaRouter = require('koa-router');
 const connectMincer = require('connect-mincer');
 
 module.exports = function (opts) {
+    const log = debug('koa-mincer');
+
+    log("setup start");
     const cm = new connectMincer(opts);
 
-    if(opts.mountPath == null) {
+    if (opts.mountPath == null) {
         opts.mountPath = "/assets";
     }
 
@@ -21,35 +24,37 @@ module.exports = function (opts) {
         };
     }
 
+    log("run configure");
     opts.configure(cm);
 
+    log("setup asset helper middleware");
     const _assets = cm.assets();
     cm.assets = function () {
         return koaCompose([
-            function*(next) {
+            koaConvert(function *(next) {
                 this.res.locals = {};
                 yield next;
-            },
-            koaConnect(_assets),
-            function*(next) {
+            }),
+            koaConvert(koaConnect(_assets)),
+            koaConvert(function *(next) {
                 this.state = this.res.locals;
                 yield next;
-            }
+            })
         ]);
     };
 
-    const _createServer = cm.createServer();
-    cm.createServer = function () {
-        const serverApp = koa();
-        serverApp.use(koaConnect(_createServer));
-        return koaMount(opts.mountPath, serverApp);
+    log("setup asset server middleware");
+    const assetServer = function () {
+        return koaConvert(koaMount(opts.mountPath, koaConnect(cm.createServer())));
     };
 
     const middlewares = [cm.assets()];
 
-    if(opts.production === false) {
-        middlewares.push(cm.createServer());
+    if (opts.production === false) {
+        middlewares.push(assetServer());
     }
 
+    log("setup finished");
+    log("compose middlewares");
     return koaCompose(middlewares);
 };
