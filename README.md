@@ -1,15 +1,22 @@
 # koa-mincer
 
-Provides a koa middleware for assets.
+Provides a koa2 middleware for assets.
+
+** This branch is for [KOA2](https://github.com/koajs/koa/tree/v2.x) **
 
 [![npm version](https://badge.fury.io/js/koa-mincer.svg)](https://badge.fury.io/js/koa-mincer)
 
-[![Build Status](https://travis-ci.org/naxmefy/koa-mincer.svg?branch=master)](https://travis-ci.org/naxmefy/koa-mincer)
-[![Coverage Status](https://coveralls.io/repos/github/naxmefy/koa-mincer/badge.svg?branch=master)](https://coveralls.io/github/naxmefy/koa-mincer?branch=master)
+[![Build Status](https://travis-ci.org/naxmefy/koa-mincer.svg?branch=v2.x)](https://travis-ci.org/naxmefy/koa-mincer)
+[![Coverage Status](https://coveralls.io/repos/github/naxmefy/koa-mincer/badge.svg?branch=v2.x)](https://coveralls.io/github/naxmefy/koa-mincer?branch=v2.x)
 
 [![Dependency Status](https://gemnasium.com/naxmefy/koa-mincer.svg)](https://gemnasium.com/naxmefy/koa-mincer)
 
 [![NPM](https://nodei.co/npm/koa-mincer.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/koa-mincer/)
+
+koa-mincer version  | koa version | branch | npm tag
+------------------- | ------------| ------ | -------
+1.x                 | 1.x         | master | latest
+2.x                 | 2.x         | v2.x   | next
 
 ## installation
 
@@ -22,10 +29,10 @@ $ npm install --save koa-mincer
 ```JavaScript
 "use strict";
 
-const koa = require('koa');
+const Koa = require('koa');
 const koaMincer = require('koa-mincer');
 
-const app = module.exports = koa();
+const app = module.exports = new Koa();
 
 // ...
 
