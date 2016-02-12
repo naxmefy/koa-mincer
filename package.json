@@ -1,60 +1,60 @@
 {
-  "name": "koa-mincer",
-  "version": "1.0.0",
-  "description": "koa middleware for mincer assets",
-  "main": "index.js",
-  "scripts": {
-    "test": "node_modules/.bin/mocha test",
-    "test-cov": "node_modules/.bin/istanbul cover node_modules/mocha/bin/_mocha test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/naxmefy/koa-mincer.git"
-  },
-  "keywords": [
-    "koa",
-    "middleware",
-    "mincer",
-    "assets"
-  ],
-  "engines": {
-    "node": ">= 4.2"
-  },
-  "author": "naxmefy",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/naxmefy/koa-mincer/issues"
-  },
-  "homepage": "https://github.com/naxmefy/koa-mincer#readme",
-  "dependencies": {
-      "co": "^4.6.0",
-    "connect-mincer": "^1.1.0",
-      "debug": "^2.2.0",
-      "koa": "^2.0.0-alpha.3",
-      "koa-compose": "^3.0.0",
-    "koa-connect": "^1.0.0",
-      "koa-convert": "^1.2.0",
-    "koa-mount": "^1.3.0",
-      "koa-router": "^7.0.1",
-    "mincer": "^1.4.1"
-  },
-  "devDependencies": {
-      "babel-preset-es2015-node5": "^1.1.2",
-      "babel-preset-stage-3": "^6.5.0",
-      "babel-register": "^6.5.1",
-    "co-mocha": "^1.1.2",
-    "co-supertest": "0.0.10",
-    "coffee-script": "^1.10.0",
-    "ejs": "^2.4.1",
-    "istanbul": "^0.4.2",
-    "jade": "^1.11.0",
-    "jst": "0.0.13",
-    "koa-error": "^1.1.3",
-    "koa-views": "^4.0.1",
-    "less": "^1.7.5",
-    "mocha": "^2.4.4",
-    "should": "^8.2.1",
-    "stylus": "^0.53.0",
-    "supertest": "^1.1.0"
-  }
+    "name": "koa-mincer",
+    "version": "1.0.0",
+    "description": "koa middleware for mincer assets",
+    "main": "index.js",
+    "scripts": {
+        "test": "node_modules/.bin/mocha test",
+        "test-cov": "node_modules/.bin/istanbul cover node_modules/mocha/bin/_mocha test"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/naxmefy/koa-mincer.git"
+    },
+    "keywords": [
+        "koa",
+        "middleware",
+        "mincer",
+        "assets"
+    ],
+    "engines": {
+        "node": ">= 4.2"
+    },
+    "author": "naxmefy",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/naxmefy/koa-mincer/issues"
+    },
+    "homepage": "https://github.com/naxmefy/koa-mincer#readme",
+    "dependencies": {
+        "co": "^4.6.0",
+        "connect-mincer": "^1.1.0",
+        "debug": "^2.2.0",
+        "koa": "^2.0.0-alpha.3",
+        "koa-compose": "^3.0.0",
+        "koa-connect": "^1.0.0",
+        "koa-convert": "^1.2.0",
+        "koa-mount": "^1.3.0",
+        "koa-router": "^7.0.1",
+        "mincer": "^1.4.1"
+    },
+    "devDependencies": {
+        "babel-preset-es2015-node5": "^1.1.2",
+        "babel-preset-stage-3": "^6.5.0",
+        "babel-register": "^6.5.1",
+        "co-mocha": "^1.1.2",
+        "co-supertest": "0.0.10",
+        "coffee-script": "^1.10.0",
+        "ejs": "^2.4.1",
+        "istanbul": "^0.4.2",
+        "jade": "^1.11.0",
+        "jst": "0.0.13",
+        "koa-error": "^1.1.3",
+        "koa-views": "^4.0.1",
+        "less": "^1.7.5",
+        "mocha": "^2.4.4",
+        "should": "^8.2.1",
+        "stylus": "^0.53.0",
+        "supertest": "^1.1.0"
+    }
 }
