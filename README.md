@@ -21,7 +21,7 @@ koa-mincer version  | koa version | branch | npm tag
 ## installation
 
 ```
-$ npm install --save koa-mincer
+$ npm install --save koa-mincer@next
 ```
 
 ## usage
