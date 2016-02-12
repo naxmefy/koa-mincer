@@ -10,6 +10,8 @@ Provides a koa middleware for assets.
 
 [![Dependency Status](https://gemnasium.com/naxmefy/koa-mincer.svg)](https://gemnasium.com/naxmefy/koa-mincer)
 
+[![NPM](https://nodei.co/npm/koa-mincer.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/koa-mincer/)
+
 ## installation
 
 ```
