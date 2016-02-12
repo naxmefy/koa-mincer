@@ -2,7 +2,7 @@
 
 Provides a koa2 middleware for assets.
 
-** This branch is for [KOA2](https://github.com/koajs/koa/tree/v2.x) **
+**This branch is for [KOA2](https://github.com/koajs/koa/tree/v2.x)**
 
 [![npm version](https://badge.fury.io/js/koa-mincer.svg)](https://badge.fury.io/js/koa-mincer)
 
