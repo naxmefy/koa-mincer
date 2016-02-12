@@ -6,10 +6,9 @@ node_js:
 before_script:
   - npm install -g codacy-coverage
   - npm install -g coveralls
-  - npm install -g mocha-lcov-reporter
 
 script:
-  - npm run test-cov -- -- --reporter mocha-lcov-reporter
+  - npm run test-cov
 
 after_script:
   - cat ./coverage/lcov.info | codacy-coverage
