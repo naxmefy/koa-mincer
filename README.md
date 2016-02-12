@@ -2,6 +2,8 @@
 
 Provides a koa middleware for assets.
 
+**Information for use with [Koa2](https://github.com/koajs/koa/tree/v2.x) watch branch [v2.x](https://github.com/naxmefy/koa-mincer/tree/v2.x)**
+
 [![npm version](https://badge.fury.io/js/koa-mincer.svg)](https://badge.fury.io/js/koa-mincer)
 
 [![Build Status](https://travis-ci.org/naxmefy/koa-mincer.svg?branch=master)](https://travis-ci.org/naxmefy/koa-mincer)
@@ -10,6 +12,11 @@ Provides a koa middleware for assets.
 [![Dependency Status](https://gemnasium.com/naxmefy/koa-mincer.svg)](https://gemnasium.com/naxmefy/koa-mincer)
 
 [![NPM](https://nodei.co/npm/koa-mincer.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/koa-mincer/)
+
+koa-mincer version  | koa version | branch | npm tag
+------------------- | ------------| ------ | -------
+1.x                 | 1.x         | master | latest
+2.x                 | 2.x         | v2.x   | next
 
 ## installation
 
