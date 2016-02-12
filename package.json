@@ -4,8 +4,8 @@
   "description": "koa middleware for mincer assets",
   "main": "index.js",
   "scripts": {
-    "test": "node_modules/.bin/mocha",
-    "test-cov": "node_modules/.bin/istanbul cover node_modules/mocha/bin/_mocha"
+      "test": "node_modules/.bin/mocha test",
+      "test-cov": "node_modules/.bin/istanbul cover node_modules/mocha/bin/_mocha test"
   },
   "repository": {
     "type": "git",
@@ -26,15 +26,6 @@
     "url": "https://github.com/naxmefy/koa-mincer/issues"
   },
   "homepage": "https://github.com/naxmefy/koa-mincer#readme",
-  "eslintConfig": {
-    "env": {
-      "node": true
-    },
-    "ecmaFeatures": {
-      "blockBindings": true,
-      "generators": true
-    }
-  },
   "dependencies": {
     "connect-mincer": "^1.1.0",
     "koa": "^1.1.2",
