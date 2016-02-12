@@ -4,12 +4,10 @@ node_js:
   - "5.5"
 
 before_script:
-  - npm install -g codacy-coverage
   - npm install -g coveralls
 
 script:
   - npm run test-cov
 
 after_script:
-  - cat ./coverage/lcov.info | codacy-coverage
   - cat ./coverage/lcov.info | coveralls

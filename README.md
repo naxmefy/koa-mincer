@@ -3,10 +3,9 @@
 Provides a koa middleware for assets.
 
 [![npm version](https://badge.fury.io/js/koa-mincer.svg)](https://badge.fury.io/js/koa-mincer)
-[![Build Status](https://travis-ci.org/naxmefy/koa-mincer.svg?branch=master)](https://travis-ci.org/naxmefy/koa-mincer)
 
-[![Codacy Badge](https://api.codacy.com/project/badge/grade/96a5be91b535493f9acce7b73b8d19ff)](https://www.codacy.com/app/naxmefy/koa-mincer)
-[![Codacy Badge](https://api.codacy.com/project/badge/coverage/96a5be91b535493f9acce7b73b8d19ff)](https://www.codacy.com/app/naxmefy/koa-mincer)
+[![Build Status](https://travis-ci.org/naxmefy/koa-mincer.svg?branch=master)](https://travis-ci.org/naxmefy/koa-mincer)
+[![Coverage Status](https://coveralls.io/repos/github/naxmefy/koa-mincer/badge.svg?branch=master)](https://coveralls.io/github/naxmefy/koa-mincer?branch=master)
 
 [![Dependency Status](https://gemnasium.com/naxmefy/koa-mincer.svg)](https://gemnasium.com/naxmefy/koa-mincer)
 
