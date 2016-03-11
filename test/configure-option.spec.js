@@ -29,10 +29,9 @@ app.use(koaMincer({
 const request = supertest(app.listen());
 
 describe("koa-mincer", function () {
-    describe("asset pipeline with configure", function () {
+    describe("asset pipeline with configure (bare: false)", function () {
         it("should response 200 and asset for GET /assets/coffee.js", function *() {
             const response = yield request.get("/assets/coffee.js").end();
-            console.log(response.text);
             response.headers["content-type"].should.be.containEql("application/javascript");
             response.text.should.be.containEql("(function() {");
             response.text.should.be.containEql("var x;");

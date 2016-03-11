@@ -38,16 +38,16 @@ module.exports = function (opts) {
         ]);
     };
 
-    const _createServer = cm.createServer();
-    cm.createServer = function () {
-        const serverApp = koa();
-        serverApp.use(koaConnect(_createServer));
-        return koaMount(opts.mountPath, serverApp);
-    };
-
     const middlewares = [cm.assets()];
 
     if(opts.production === false) {
+        const _createServer = cm.createServer();
+        cm.createServer = function () {
+            const serverApp = koa();
+            serverApp.use(koaConnect(_createServer));
+            return koaMount(opts.mountPath, serverApp);
+        };
+        
         middlewares.push(cm.createServer());
     }
 
